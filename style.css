@@ -329,6 +329,15 @@ h1 {
     font-size: 1.2rem;
     max-width: 600px;
 }
+.why-section {
+  background: radial-gradient(
+    circle at top,
+    #0f2a2e 0%,
+    #071318 60%,
+    #050b10 100%
+  );
+  padding: 60px 20px;
+}
 
 /* --- Make Cards POP --- */
 .role-card {
@@ -461,7 +470,11 @@ p {
     font-weight: bold;
     text-decoration: none;
 }
-
+.why-section .card {
+  background: linear-gradient(145deg, #16222d, #0e1620);
+  border: 1px solid rgba(0, 255, 200, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
 /* --- Buttons --- */
 .btn-primary, .btn-small {
     background: var(--accent-neon) !important;
@@ -518,7 +531,16 @@ p, .hero-text p {
     margin-bottom: 20px;
     border: 1px solid #334155; /* Subtle border to define the shape */
 }
-
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(45, 255, 204, 0.5),
+    transparent
+  );
+  margin: 60px 0;
+}
 /* Title inside the cards */
 .role-card h3, .benefit-item h3 {
     color: #00ffcc !important; /* Neon mint for card titles */
@@ -549,7 +571,16 @@ p, .hero-text p {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
+.why-section h3 {
+  color: #2dffcc;
+  font-weight: 600;
+}
 
+.why-section p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+}
 /* --- 5. Button Visibility --- */
 .btn-primary, .btn-small {
     background-color: #00ffcc !important;
