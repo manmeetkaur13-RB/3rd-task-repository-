@@ -398,6 +398,10 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
 }
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
 
 /* --- Navigation Header --- */
 .main-header {
@@ -416,7 +420,6 @@ body {
     font-weight: 600;
     text-decoration: none;
 }
-
 /* --- Hero Title (Darker & Bolder) --- */
 h1 {
     font-size: 3.5rem;
@@ -430,6 +433,12 @@ h1 {
 p {
     color: var(--text-secondary);
     font-size: 1.1rem;
+}
+.hero-subtitle {
+  font-size: 16px;
+  color: #475569; /* soft dark gray */
+  max-width: 520px;
+  line-height: 1.6;
 }
 
 /* --- Card Section (High Contrast) --- */
@@ -468,6 +477,14 @@ p {
 .btn-primary:hover {
     box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
     transform: scale(1.02);
+}
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 /* --- 1. Global Background Fix --- */
@@ -512,6 +529,25 @@ p, .hero-text p {
 /* Text inside the cards */
 .role-card p, .benefit-item p {
     color: #ffffff !important; /* Pure white for maximum readability inside cards */
+}
+.card h3 {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.card p {
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card {
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* --- 5. Button Visibility --- */
