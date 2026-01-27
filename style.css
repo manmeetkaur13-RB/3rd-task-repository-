@@ -283,4 +283,11 @@ body {
         color: var(--accent-mint);
     }
 </style>
+/* Add this to your style.css if it's not already there */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 
