@@ -380,3 +380,92 @@ h1 {
     color: var(--accent-mint) !important;
 }
 
+/* Import bold, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    --bg-dark: #050810;      /* Deep black-navy */
+    --accent-neon: #00ffcc;  /* Vibrant Neon Mint */
+    --accent-blue: #3b82f6;  /* Deep Professional Blue */
+    --text-primary: #ffffff; /* Pure white for maximum visibility */
+    --text-secondary: #94a3b8; /* Slate gray for descriptions */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* --- Navigation Header --- */
+.main-header {
+    background: rgba(5, 8, 16, 0.95);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo strong {
+    color: var(--accent-neon);
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* --- Hero Title (Darker & Bolder) --- */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--accent-neon), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* --- Card Section (High Contrast) --- */
+.role-card {
+    background: #111827 !important; /* Solid dark background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.role-card h3 {
+    color: var(--accent-neon); /* Makes role titles very visible */
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.text-link {
+    color: var(--accent-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-small {
+    background: var(--accent-neon) !important;
+    color: #000000 !important; /* Black text on neon for legibility */
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
+    transform: scale(1.02);
+}
