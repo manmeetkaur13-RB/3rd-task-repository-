@@ -469,3 +469,66 @@ p {
     box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
     transform: scale(1.02);
 }
+
+/* --- 1. Global Background Fix --- */
+body {
+    background-color: #0a0e17 !important; /* Deep dark background */
+    color: #ffffff; /* Global white text */
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- 2. Title Contrast Fix --- */
+h1 {
+    color: #00ffcc !important; /* Bright neon for the main heading */
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* --- 3. Making "Invisible" Paragraphs Visible --- */
+p, .hero-text p {
+    color: #cbd5e1 !important; /* Light grey text that stands out on dark backgrounds */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- 4. Section Card Fix (The Red Circles) --- */
+.role-card, .benefit-item {
+    background: #1e293b !important; /* Dark blue-grey card background */
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #334155; /* Subtle border to define the shape */
+}
+
+/* Title inside the cards */
+.role-card h3, .benefit-item h3 {
+    color: #00ffcc !important; /* Neon mint for card titles */
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Text inside the cards */
+.role-card p, .benefit-item p {
+    color: #ffffff !important; /* Pure white for maximum readability inside cards */
+}
+
+/* --- 5. Button Visibility --- */
+.btn-primary, .btn-small {
+    background-color: #00ffcc !important;
+    color: #0a0e17 !important; /* Dark text on bright button */
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- 6. Navigation Link Visibility --- */
+.nav-links a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
