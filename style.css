@@ -290,4 +290,93 @@ img {
     display: block;
 }
 
+/* Import a bolder font for better visibility */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    --bg-dark: #070b14; /* Much darker navy for better contrast */
+    --accent-mint: #00ffcc; /* Neon Mint that glows */
+    --accent-blue: #3b82f6;
+    --card-bg: #111827; /* Darker card background */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    /* Adding a darker gradient so text stays visible */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 255, 204, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* --- Hero Section Fix --- */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 20px;
+    /* Ultra-bright gradient */
+    background: linear-gradient(90deg, #00ffcc, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    color: #94a3b8; /* Slate gray for secondary text */
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* --- Make Cards POP --- */
+.role-card {
+    background: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    /* Added shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.role-card:hover {
+    border-color: var(--accent-mint);
+    transform: translateY(-5px);
+}
+
+.role-card h3 {
+    color: var(--accent-mint); /* Mint headings inside cards */
+    margin-bottom: 10px;
+}
+
+/* --- Bright Neon Buttons --- */
+.btn-primary, button {
+    background: var(--accent-mint) !important;
+    color: #000000 !important; /* Black text on neon for max legibility */
+    padding: 16px 32px !important;
+    border-radius: 12px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.6);
+}
+
+/* --- Navigation --- */
+.nav-links a {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--accent-mint) !important;
+}
 
