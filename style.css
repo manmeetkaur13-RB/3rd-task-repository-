@@ -260,3 +260,12 @@ body {
     gap: 14px;
   }
 }
+/* your existing CSS above */
+
+/* Hamburger styles – ADD AT THE END */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
