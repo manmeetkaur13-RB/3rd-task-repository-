@@ -1,5 +1,5 @@
 /* ===============================
-   ROOT COLORS (KEEP YOUR THEME)
+   ROOT COLORS
 ================================ */
 :root {
   --bg-dark: #0a0e17;
@@ -11,7 +11,7 @@
 }
 
 /* ===============================
-   GLOBAL RESET
+   RESET
 ================================ */
 * {
   margin: 0;
@@ -24,18 +24,24 @@ html {
 }
 
 body {
+  font-family: 'Inter', sans-serif;
   background: radial-gradient(circle at top, #0f2a2e, #070b12 60%);
   color: var(--text-main);
-  font-family: 'Inter', sans-serif;
   line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  max-width: 100%;
   overflow-x: hidden;
 }
 
 /* ===============================
-   NAVBAR (CLEAN & RESPONSIVE)
+   CONTAINER
+================================ */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===============================
+   HEADER / NAVBAR
 ================================ */
 .main-header {
   position: sticky;
@@ -46,13 +52,11 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 20px;
+.nav-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 18px 0;
 }
 
 .logo {
@@ -62,10 +66,10 @@ body {
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 28px;
-  list-style: none;
 }
 
 .nav-links a {
@@ -90,108 +94,149 @@ body {
   width: 100%;
 }
 
-.login-btn {
-  padding: 10px 22px;
+.btn-small {
+  padding: 8px 18px;
   background: var(--accent);
   color: #000;
   border-radius: 8px;
   font-weight: 700;
-  text-decoration: none;
 }
 
 /* ===============================
    HERO SECTION
 ================================ */
-.hero {
-  padding: 120px 20px;
-  text-align: center;
-  animation: fadeUp 0.8s ease;
+.layout-section {
+  padding: 90px 0;
 }
 
-.hero h1 {
+.hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text h1 {
   font-size: 3rem;
   margin-bottom: 12px;
 }
 
-.hero p {
+.hero-text p {
   color: var(--text-muted);
-  max-width: 600px;
-  margin: auto;
+  margin-bottom: 20px;
+}
+
+.hero-image-container img {
+  border-radius: 16px;
+  max-width: 100%;
 }
 
 /* ===============================
-   SECTIONS
+   BUTTONS
 ================================ */
-section {
-  padding: 90px 20px;
+.btn-primary {
+  padding: 12px 26px;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
+/* ===============================
+   ROLES
+================================ */
 .section-title {
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* ===============================
-   CARDS / GRID
-================================ */
-.grid {
+.role-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.card {
+.role-card {
   background: var(--bg-card);
   padding: 24px;
   border-radius: 16px;
-  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
+.role-card p {
+  color: var(--text-muted);
 }
 
-.card p {
+.text-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===============================
+   BENEFITS
+================================ */
+.bg-light {
+  background: rgba(255,255,255,0.02);
+}
+
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-item p {
   color: var(--text-muted);
 }
 
 /* ===============================
    CTA
 ================================ */
-.cta {
+.text-center {
   text-align: center;
-  padding-bottom: 100px;
-}
-
-.cta p {
-  margin: 14px 0 26px;
-  color: var(--text-muted);
 }
 
 /* ===============================
    FOOTER
 ================================ */
-footer {
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+.main-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.footer-links a {
   color: var(--text-muted);
+  text-decoration: none;
 }
 
 /* ===============================
    RESPONSIVE FIXES
 ================================ */
 @media (max-width: 992px) {
-  .grid {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .role-grid,
+  .benefit-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 14px 16px;
-  }
-
   .nav-links {
     gap: 16px;
   }
@@ -200,58 +245,18 @@ footer {
     font-size: 14px;
   }
 
-  .login-btn {
-    padding: 8px 16px;
+  .btn-small {
+    padding: 6px 14px;
     font-size: 14px;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  section {
-    padding: 70px 16px;
-  }
-
-  .grid {
+  .role-grid,
+  .benefit-list {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 576px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-}
-
-/* ===============================
-   UTILITIES
-================================ */
-a,
-button {
-  -webkit-tap-highlight-color: transparent;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .footer-content {
+    flex-direction: column;
+    gap: 14px;
   }
 }
