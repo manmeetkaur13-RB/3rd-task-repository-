@@ -272,3 +272,31 @@ body {
 html {
   scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* hide menu by default on mobile */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111827;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+  }
+
+  .nav-links.active-menu {
+    display: flex;
+  }
+}
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background-color: var(--accent); /* visible on dark header */
+  border-radius: 3px;
+}
