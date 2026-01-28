@@ -358,3 +358,15 @@ img {
 .flex {
   flex-wrap: wrap;
 }
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    font-size: 14px;
+  }
+}
