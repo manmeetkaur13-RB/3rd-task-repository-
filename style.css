@@ -65,6 +65,7 @@ body {
   color: var(--accent);
 }
 
+/* NAV LINKS (DESKTOP) */
 .nav-links {
   list-style: none;
   display: flex;
@@ -100,6 +101,24 @@ body {
   color: #000;
   border-radius: 8px;
   font-weight: 700;
+}
+
+/* ===============================
+   HAMBURGER
+================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 3px;
 }
 
 /* ===============================
@@ -190,13 +209,6 @@ body {
 }
 
 /* ===============================
-   CTA
-================================ */
-.text-center {
-  text-align: center;
-}
-
-/* ===============================
    FOOTER
 ================================ */
 .main-footer {
@@ -222,7 +234,7 @@ body {
 }
 
 /* ===============================
-   RESPONSIVE FIXES
+   RESPONSIVE
 ================================ */
 @media (max-width: 992px) {
   .hero-flex {
@@ -237,17 +249,29 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: flex;
+  }
+
+  /* HIDE DESKTOP MENU */
   .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 20px;
+    background: #111827;
+    flex-direction: column;
     gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
   }
 
-  .nav-links a {
-    font-size: 14px;
-  }
-
-  .btn-small {
-    padding: 6px 14px;
-    font-size: 14px;
+  /* SHOW MENU ON CLICK */
+  .nav-links.active-menu {
+    display: flex;
   }
 
   .role-grid,
@@ -259,44 +283,4 @@ body {
     flex-direction: column;
     gap: 14px;
   }
-}
-/* your existing CSS above */
-
-/* Hamburger styles – ADD AT THE END */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-html {
-  scroll-behavior: smooth;
-}
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none; /* hide menu by default on mobile */
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #111827;
-    flex-direction: column;
-    gap: 16px;
-    padding: 20px;
-    border-radius: 12px;
-    width: 220px;
-  }
-
-  .nav-links.active-menu {
-    display: flex;
-  }
-}
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background-color: var(--accent); /* visible on dark header */
-  border-radius: 3px;
 }
