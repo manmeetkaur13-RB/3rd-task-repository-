@@ -277,3 +277,84 @@ a, button {
     transform: translateY(0);
   }
 }
+/* Prevent horizontal scroll issues */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Images should scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Containers should not overflow */
+.container,
+.wrapper,
+.section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 992px) {
+  .grid,
+  .cards,
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .grid,
+  .cards,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+  }
+}
+.section,
+.card,
+.box {
+  word-wrap: break-word;
+}
+
+.flex {
+  flex-wrap: wrap;
+}
