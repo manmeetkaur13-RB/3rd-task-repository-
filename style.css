@@ -305,3 +305,46 @@ body {
   margin: 0;                    /* 🔴 remove margin */
   padding: 0;
 }
+
+/* ===== FORCE HEADER HEIGHT FIX ===== */
+
+.main-header {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+}
+
+.main-header nav {
+  padding: 6px 14px !important;
+  margin: 0 !important;
+  min-height: unset !important;
+}
+
+/* container causing space */
+.main-header .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* logo fix */
+.logo {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+/* hamburger fix */
+.hamburger {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hamburger span {
+  margin: 4px 0 !important;
+}
+
+/* ===== REMOVE GAP BELOW HEADER ===== */
+#hero {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+}
